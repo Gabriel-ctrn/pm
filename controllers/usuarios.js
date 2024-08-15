@@ -23,6 +23,6 @@ let usuarios = [
 export function listar(){
     return usuarios
 }
-export function BuscarPorId(id){
+export function buscarPorId(id){
     return usuarios.find(usuario => usuario.id == id)
 }
