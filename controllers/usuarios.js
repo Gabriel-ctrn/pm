@@ -26,3 +26,18 @@ export function listar(){
 export function buscarPorId(id){
     return usuarios.find(usuario => usuario.id == id)
 }
+export function criar(usuario){
+    usuarios.push(usuario)
+    return usuarios
+}
+export function deletar(id){
+    usuarios = usuarios.filter(user => user.id !== parseInt(id))
+    return usuarios
+}
+export function modificar(id, info){
+    const mod = buscarPorId(id)
+    const index = usuarios.indexOf(mod)
+    usuarios[index] = info
+    return usuarios
+}
+
